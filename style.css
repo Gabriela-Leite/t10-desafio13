@@ -1,0 +1,154 @@
+:root{
+    --cor1: #B5D379;
+    --cor2: #86B066;
+    --cor3: #608559;
+    --cor4: #3D5D45;
+    --cor5: #132316;
+    /*do tom mais claro ao mais escuro*/
+}
+
+html{
+    font-family: sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin: auto;
+    background-color: #fff;
+}
+
+.header_logo{
+    width: 10em;
+    height: auto;
+    padding: .7em 0 .3em;
+}
+
+#hamburguer{
+    background-color: var(--cor1);
+    color: var(--cor5);
+    display: block;
+    text-align: center;
+    padding: .05em;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.header_nav{
+    background-color: var(--cor3);
+    display: none;
+}
+
+.header_nav.show{
+    display: block;
+}
+
+ul{
+    margin: 0;
+}
+
+.header_nav ul{
+    list-style-type: none;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .8em;
+}
+
+.header_nav a{
+    color: var(--cor1);
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+}
+
+.header_nav a:hover{
+    background-color: var(--cor2);
+    color: var(--cor4);
+}
+
+@media screen and (min-width: 48em) {
+    #hamburguer{
+        display: none;
+    }
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--cor3);
+    }
+
+    .header_logo{
+        margin-left: 1.5em;
+        padding-bottom: .6em;
+    }
+
+    .header_nav{
+        display: block;
+    }
+
+    .header_nav ul{
+        margin-right: 1.5em;
+        font-size: .85em;
+    }
+
+    .header_nav li{
+        display: inline-block;
+    }
+
+    .header_nav a{
+        border-radius: 5px;
+        color: var(--cor5);
+        font-weight: 50;
+    }
+
+    .header_nav a:hover{
+       background-color: var(--cor5);
+       color: var(--cor1);
+    }
+}
+
+.background{
+    background-image: url(./imagens/greenpath.png);
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+footer{
+    background-color: var(--cor5);
+    padding: 1em;
+    text-align: center;
+}
+
+.texto_footer{
+    font-size: .9em;
+    color: var(--cor1);
+    letter-spacing: .1em;
+    margin: 0;
+    padding: .8em;
+    text-transform: uppercase;
+}
+
+.logos_footer{
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.tamanho{
+    width: 3em;
+}
+
+@media screen and (min-width: 48em){
+    .logos_footer{
+        flex-direction: row;
+        justify-content: center;
+        gap: 2.8em;
+    }
+
+}
+
+
+
